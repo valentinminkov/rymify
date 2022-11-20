@@ -1,0 +1,15 @@
+type Song @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  artist: String!
+  name: String!
+  spotifyTrackId: String
+  playlists: [Playlist] @manyToMany(relationName: "PlaylistSong")
+}
+
+type Playlist @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  Songs: [Song] @manyToMany(relationName: "PlaylistSong")
+  description: String
+  image: String
+}
