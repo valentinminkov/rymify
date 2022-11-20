@@ -1,0 +1,32 @@
+.container {
+  color: white;
+  transition: width 2s;
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .controlsContainer {
+    padding: 1rem;
+    background-color: hsl(0, 0%, 70%);
+  }
+  .dataContainer {
+    padding: 1rem;
+    background-color: hsl(0, 0%, 80%);
+    transition: opacity 1s;
+    opacity: 0;
+    &.display {
+        opacity: 1;
+    }
+  }
+  .loader {
+    margin-top: 8px;
+    width: 150px;
+  }
+  .textField {
+    label {
+      font-weight: bold;
+    }
+    margin-bottom: 8px;
+  }
+}
